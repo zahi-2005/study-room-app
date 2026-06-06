@@ -7,3 +7,4 @@ passlib
 python-multipart
 websockets
 bcrypt
+psycopg2-binary
