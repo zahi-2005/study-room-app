@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Room</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="room-container">
+        
+        <div class="room-main">
+            <h1 id="room-name">Loading...</h1>
+            <p class="room-topic-label" id="room-topic"></p>
+
+            
+            <div class="timer-display" id="timer">25:00</div>
+
+            <div class="timer-buttons">
+                <button class="btn-primary" onclick="startTimer()">Start Timer</button>
+                <button class="btn-secondary" onclick="resetTimer()">Reset</button>
+            </div>
+
+            <button class="btn-secondary" onclick="leaveRoom()">← Leave Room</button>
+        </div>
+
+        
+        <div class="room-sidebar">
+            <div class="sidebar-header">
+                👥 Online Members
+            </div>
+            <div class="members-list" id="members-list">
+                
+            </div>
+
+            
+            <div class="chat-section">
+                <div class="sidebar-header">💬 Chat</div>
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="chat-input-row">
+                    <input type="text" id="chat-input" placeholder="Type a message..." 
+                           onkeypress="if(event.key==='Enter') sendMessage()"/>
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/room.js"></script>
+</body>
+</html>
